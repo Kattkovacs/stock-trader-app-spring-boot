@@ -2,6 +2,7 @@ package com.codecool.stocktraderappspringboot.stockApp.model;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,6 +12,7 @@ import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 import java.util.stream.Collectors;
 
+@Component
 public class RemoteURLReader {
 
     public String readFromUrl(String endpoint) throws IOException {
@@ -25,6 +27,7 @@ public class RemoteURLReader {
     /**
      * Stock price service that gets prices from Yahoo.
      **/
+
     public static class StockAPIService {
 
         private static final String apiPath = "https://run.mocky.io/v3/9e14e086-84c2-4f98-9e36-54928830c980?stock=%s";

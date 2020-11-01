@@ -3,6 +3,8 @@ package com.codecool.stocktraderappspringboot.stockApp;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import javax.annotation.PostConstruct;
+
 @SpringBootApplication
 public class StockTraderAppSpringBootApplication {
 
@@ -10,4 +12,8 @@ public class StockTraderAppSpringBootApplication {
         SpringApplication.run(StockTraderAppSpringBootApplication.class, args);
     }
 
+    @PostConstruct
+    public void afterInit() {
+
+    }
 }

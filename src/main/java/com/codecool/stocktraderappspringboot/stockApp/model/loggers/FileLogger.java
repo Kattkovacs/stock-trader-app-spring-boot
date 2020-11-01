@@ -1,5 +1,7 @@
 package com.codecool.stocktraderappspringboot.stockApp.model.loggers;
 
+import org.springframework.stereotype.Component;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -7,6 +9,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+@Component
 public class FileLogger implements Logger {
 
     @Override
