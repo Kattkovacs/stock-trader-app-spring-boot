@@ -1,5 +1,5 @@
 package com.codecool.stocktraderappspringboot.stockApp.model;
-import com.codecool.stocktraderappspringboot.stockApp.model.loggers.Logger;
+import com.codecool.stocktraderappspringboot.stockApp.model.logger.Logger;
 import org.json.JSONException;
 import org.springframework.stereotype.Component;
 

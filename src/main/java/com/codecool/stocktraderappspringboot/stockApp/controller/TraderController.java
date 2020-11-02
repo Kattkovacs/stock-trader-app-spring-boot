@@ -1,44 +1,36 @@
 package com.codecool.stocktraderappspringboot.stockApp.controller;
 
-
 import com.codecool.stocktraderappspringboot.stockApp.model.RemoteURLReader;
 import com.codecool.stocktraderappspringboot.stockApp.model.StockAPIService;
 import com.codecool.stocktraderappspringboot.stockApp.model.Trader;
-import com.codecool.stocktraderappspringboot.stockApp.model.loggers.FileLogger;
+import com.codecool.stocktraderappspringboot.stockApp.model.logger.FileLogger;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.io.IOException;
 
 
 @RestController
-class TradeController {
-	@Autowired
-	private FileLogger logger;
-	@Autowired
-	private RemoteURLReader remoteURLReader;
-	@Autowired
-	private StockAPIService stockAPIService;
-	@Autowired
-	private Trader trader;
+class TraderController {
+    @Autowired
+    private Trader trader;
 
-	@GetMapping("/buy/{stock}/{price}")
-	public String buyStock(@PathVariable("stock") String stock, @PathVariable("price")double price) {
-		boolean result = false;
-		String message;
-		try {
-			result = trader.buy(stock, price);
-			message = (result) ? "Purchased Stock." : "Couldn't purchase stock at that price.";
-		} catch (JSONException | IOException e) {
-			message = "There was an error while attempting to buy stock.";
-			e.printStackTrace();
-		}
+    @GetMapping("/buy/{stock}/{price}")
+    public String buyStock(@PathVariable("stock") String stock, @PathVariable("price")double price) {
+        boolean result = false;
+        String message;
+        try {
+            result = trader.buy(stock, price);
+            message = (result) ? "Purchased Stock." : "Couldn't purchase stock at that price.";
+        } catch (JSONException | IOException e) {
+            message = "There was an error while attempting to buy stock.";
+            e.printStackTrace();
+        }
 
-		return message;
-	}
+        return message;
+    }
 }
 //earlier version form stock-trader-app
 ///**

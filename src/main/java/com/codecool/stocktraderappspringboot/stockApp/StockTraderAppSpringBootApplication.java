@@ -12,8 +12,4 @@ public class StockTraderAppSpringBootApplication {
         SpringApplication.run(StockTraderAppSpringBootApplication.class, args);
     }
 
-    @PostConstruct
-    public void afterInit() {
-
-    }
 }

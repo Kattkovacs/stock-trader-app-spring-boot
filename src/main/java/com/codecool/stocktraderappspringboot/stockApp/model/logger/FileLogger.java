@@ -1,4 +1,4 @@
-package com.codecool.stocktraderappspringboot.stockApp.model.loggers;
+package com.codecool.stocktraderappspringboot.stockApp.model.logger;
 
 import org.springframework.stereotype.Component;
 

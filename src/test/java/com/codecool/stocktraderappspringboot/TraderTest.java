@@ -2,7 +2,7 @@ package com.codecool.stocktraderappspringboot;
 
 import com.codecool.stocktraderappspringboot.stockApp.model.StockAPIService;
 import com.codecool.stocktraderappspringboot.stockApp.model.Trader;
-import com.codecool.stocktraderappspringboot.stockApp.model.loggers.FileLogger;
+import com.codecool.stocktraderappspringboot.stockApp.model.logger.FileLogger;
 import org.json.JSONException;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
